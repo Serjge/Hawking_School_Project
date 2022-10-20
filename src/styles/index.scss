@@ -1,2 +1,5 @@
 @use 'globals';
 @use 'fonts';
+
+@import 'src/styles/normalize';
+@import 'src/components/header/header';
