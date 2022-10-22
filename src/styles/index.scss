@@ -1,5 +1,6 @@
-@use 'globals';
-@use 'fonts';
-
 @import 'src/styles/normalize';
+@import 'src/styles/fonts';
+@import 'src/styles/globals';
+
 @import 'src/components/header/header';
+@import 'src/components/main/main';

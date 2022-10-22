@@ -19,3 +19,24 @@
   src: local('Montserrat'), url('../assets/fonts/Montserrat-SemiBold.ttf') format('truetype')
 }
 
+@font-face {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 800;
+  src: local('Montserrat'), url('../assets/fonts/Montserrat-ExtraBold.ttf') format('truetype')
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 300;
+  src: local('Montserrat'), url('../assets/fonts/Montserrat-Light.ttf') format('truetype')
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  src: local('Montserrat'), url('../assets/fonts/Montserrat-Medium.ttf') format('truetype')
+}
+

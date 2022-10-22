@@ -1,16 +1,23 @@
 $font-family: 'Montserrat', sans-serif;
 
 $font-base: 400 16px / 30px $font-family;
+$font-smaller: 400 14px / 17px $font-family;
+$font-breadcrumbs: 400 12px / 15px $font-family;
+$font-medium: 500 20px / 22px $font-family;
+$font-mediumSmall: 500 14px / 22px $font-family;
+
+$font-subTitle: 600 40px / 49px $font-family;
 $font-menu: 700 16px / 23px $font-family;
 $font-title: 700 60px / 73px $font-family;
-$font-subTitle: 600 40px / 49px $font-family;
 $font-baseBolt: 700 20px / 30px $font-family;
 $font-smallTitle: 700 22px / 27px $font-family;
-$font-smaller: 400 14px / 17px $font-family;
+$font-secondaryTitle: 700 70px / 85px $font-family;
+$font-superBolt: 800 50px / 63px $font-family;
 
 $primaryColor: #000000;
 $secondaryColor: #4C858B;
 $redColor: #E33E54;
 $darkRedColor: #AE2236;
 $orangeColor: #EA6628;
-$greyColor: #E5E5E5;
+$whiteColor: #E5E5E5;
+$greyColor: #B1B1B1;
