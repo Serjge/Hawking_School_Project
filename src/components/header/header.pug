@@ -1,46 +1,55 @@
 header.header
-  .header__logo
-    a(href='#')
-      img.src(src='assets/images/Logo.svg' alt='logo')
-  nav.header__menu
-    ul.menu__container
-      li.menu__item
-        a(href='#') Каталог товаров
-      li.menu__item
-        a(href='#') доставка и оплата
-      li.menu__item
-        a(href='#') Цены
-      li.menu__item
-        a(href='#') Контакты
 
-  a(href='tel:78125092198').header__telefone +7 (812)
-    b  509 21 98
+  .header__wrapper
+    .header__logo
+      a(href='#')
+        img.src(src='assets/images/Logo.svg' alt='logo')
+    .burger.first
+      .burger__line
+      .burger__line
+      .burger__line
 
-  p.header__link перезвоните мне
+    nav.header__menu
+      ul.menu__container
+        li.menu__item
+          a(href='#') Каталог товаров
+        li.menu__item
+          a(href='#') доставка и оплата
+        li.menu__item
+          a(href='#') Цены
+        li.menu__item
+          a(href='#') Контакты
 
-    ul.header__social
-      li
-        a(href='vk.com')
-          img.src(src='assets/images/social/vk.svg' alt='vk')
-      li
-        a(href='tg.com')
-          img.src(src='assets/images/social/telegram.svg' alt='telegram')
-      li
-        a(href='instagram.com')
-          img.src(src='assets/images/social/instagram.svg' alt='instagram')
-      li
-        a(href='whatsapp.com')
-          img.src(src='assets/images/social/whatsApp.svg' alt='whatsApp')
+  .header__wrapper
 
-    .header__submenu.submenu
-      .submenu__item
-        img.src(src='assets/images/loupe.svg' alt='search')
-      .submenu__item
-        img.src(src='assets/images/heart.svg' alt='like')
-      .submenu__item
-        img.src(src='assets/images/shopping-cart.svg' alt='cart')
-        .submenu__quantity 10
-      .burger
-        .burger__line
-        .burger__line
-        .burger__line
+    a(href='tel:78125092198').header__telefone +7 (812)
+      b  509 21 98
+
+    p.header__link перезвоните мне
+
+      ul.header__social
+        li
+          a(href='vk.com')
+            +vk('header__img')
+        li
+          a(href='tg.com')
+            +telegram('header__img')
+        li
+          a(href='instagram.com')
+            +instagram('header__img')
+        li
+          a(href='whatsapp.com')
+            +whatsApp('header__img')
+
+      .header__submenu.submenu
+        .submenu__item
+          img.src(src='assets/images/loupe.svg' alt='search')
+        .submenu__item
+          img.src(src='assets/images/heart.svg' alt='like')
+        .submenu__item
+          img.src(src='assets/images/shopping-cart.svg' alt='cart')
+          .submenu__quantity 10
+        .burger
+          .burger__line
+          .burger__line
+          .burger__line

@@ -3,17 +3,24 @@
 .header {
   display: flex;
   align-items: center;
-  padding: 26px 0 0 63px;
+  padding: 26px 58px 0 64px;
   box-sizing: border-box;
-  justify-content: space-between;
 
+  justify-content: space-between;
   @media (max-width: 768px) {
     padding: 26px 16px 0 16px;
     width: 100%;
   }
 
-  & > p {
+  & > p:last-child {
     display: none;
+  }
+
+  &__wrapper {
+    display: flex;
+    //justify-content: space-between;
+    align-items: center;
+    //width: 210px;
   }
 
   &__logo {
@@ -28,14 +35,13 @@
   }
 
   &__menu {
-    margin: 0 0 0 140px;
+    margin: 0 0 0 30px;
     @media (max-width: 768px) {
       display: none;
     }
   }
 
   &__telefone {
-    margin: 0 0 0 62px;
     text-decoration: none;
     color: $secondaryColor;
     font: $font-base;
@@ -53,7 +59,7 @@
   }
 
   &__link {
-    margin: 0 0 0 70px;
+    margin: 0 0 0 73px;
     color: $darkRedColor;
     font: $font-smaller;
     text-transform: uppercase;
@@ -68,7 +74,7 @@
   }
 
   &__social {
-    margin: 0 0 0 61px;
+    margin: 0 0 0 63px;
     padding: 0;
     display: flex;
 
@@ -82,19 +88,20 @@
       list-style-type: none;
       margin: 0 13px 0 0;
 
-      & > a > img {
-        width: 100%;
-        height: 100%;
-      }
-
       &:last-child {
         margin: 0;
       }
     }
   }
 
+  &__img {
+    width: 100%;
+    height: 100%;
+    fill: $secondaryColor;
+  }
+
   &__submenu {
-    margin: 0 0 0 58px;
+    margin: 0 0 0 53px;
     @media (max-width: 768px) {
       margin: 0;
     }
@@ -184,5 +191,13 @@
     &:last-child {
       margin: 0;
     }
+  }
+}
+
+.first {
+  display: flex;
+  margin: 0 0 0 52px;
+  @media (max-width: 768px) {
+    display: none;
   }
 }
