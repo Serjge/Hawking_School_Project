@@ -10,7 +10,7 @@ main {
 }
 
 .wrapper {
-  margin: 0 0 0 10px;
+  margin: 0 0 0 0;
 
   .breadcrumbs {
     height: 48px;
@@ -113,7 +113,7 @@ main {
 }
 
 .mounting {
-  margin: 130px 0 0 10px;
+  margin: 130px 0 0 0;
 
   &__list {
     padding: 0;
@@ -147,7 +147,7 @@ main {
 }
 
 .report {
-  margin: 100px 0 0 10px;
+  margin: 100px 0 0 0;
 
   &__description {
     margin: 50px 0 0 4px;
@@ -194,7 +194,7 @@ main {
 }
 
 .feedback {
-  margin: 86px 0 0 17px;
+  margin: 86px 0 0 0;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -284,7 +284,7 @@ main {
 
 .video {
 
-  margin: 121px 0 0 7px;
+  margin: 121px 0 0 0;
 
   &__description {
     width: 1218px;
@@ -312,12 +312,12 @@ main {
   margin: 114px 0 0 0;
 
   & > h3 {
-    margin: 0 0 0 7px;
+    margin: 0 0 0 0;
   }
 
   &__description {
     width: 1218px;
-    margin: 67px 0 0 10px;
+    margin: 67px 0 0 0;
     font: $font-base;
   }
 
@@ -326,7 +326,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 47px 0 0 7px;
+    margin: 47px 0 0 0;
     padding: 0;
   }
 
