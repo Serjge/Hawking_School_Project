@@ -4,29 +4,56 @@
   background-color: $tertiaryColor;
   height: 350px;
 
+  @media (max-width: 768px) {
+    height: 70px;
+  }
+
   &__wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 87px 0 0 0;
+
+    @media (max-width: 768px) {
+      padding: 0;
+      justify-content: center;
+      align-items: center;
+      height: 70px;
+    }
   }
 
   &__title {
     margin: 0;
     font: $font-smallTitle;
     color: $whiteColor;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 
   &__catalog {
     width: 339px;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 
   &__info {
     width: 343px;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 
   &__contacts {
     width: 309px;
+
+    @media (max-width: 768px) {
+      width: fit-content;
+    }
   }
 
   &__list {
@@ -52,11 +79,18 @@
 
   &__inner {
     margin: 18px 0 0 0;
+    @media (max-width: 768px) {
+      margin: 0;
+    }
   }
 
   &__box {
     margin: 0 0 16px 0;
     display: flex;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
 
     & > p {
       font: $font-smaller;
@@ -75,6 +109,10 @@
     display: flex;
     width: 203px;
     justify-content: space-between;
+    @media (max-width: 768px) {
+      margin: 0;
+
+    }
 
     & > li {
       width: 20px;
