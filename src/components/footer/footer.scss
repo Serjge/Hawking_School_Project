@@ -1,0 +1,91 @@
+@import "src/styles/variables";
+
+.footer {
+  background-color: $tertiaryColor;
+  height: 350px;
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 87px 0 0 17px;
+  }
+
+  &__title {
+    margin: 0;
+    font: $font-smallTitle;
+    color: $whiteColor;
+  }
+
+  &__catalog {
+    width: 339px;
+  }
+
+  &__info {
+    width: 343px;
+  }
+
+  &__contacts {
+    width: 309px;
+  }
+
+  &__list {
+    margin: 20px 0 0 0;
+    list-style: none;
+    padding: 0;
+    height: 170px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    margin: 0 0 19px 0;
+    width: 208px;
+
+    & > a {
+      font: $font-smaller;
+      color: $whiteColor;
+      text-decoration: none;
+    }
+  }
+
+  &__inner {
+    margin: 18px 0 0 0;
+  }
+
+  &__box {
+    margin: 0 0 16px 0;
+    display: flex;
+
+    & > p {
+      font: $font-smaller;
+      color: $whiteColor;
+      margin: 0 0 0 8px;
+
+      & > span {
+        color: $secondaryColor;
+      }
+    }
+  }
+
+  &__social {
+    margin: 32px 0 0 5px;
+    padding: 0;
+    display: flex;
+    width: 203px;
+    justify-content: space-between;
+
+    & > li {
+      width: 20px;
+      height: 20px;
+      list-style-type: none;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    fill: $secondaryColor;
+  }
+}
