@@ -7,6 +7,10 @@ html {
 h1 {
   font: $font-title;
   color: $primaryColor;
+  @media (max-width: 768px) {
+    font-size: 45px;
+    line-height: 55px;
+  }
 }
 
 .container {
