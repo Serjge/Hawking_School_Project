@@ -100,12 +100,12 @@ main.container
         a(href='whatsapp.com')
           +whatsApp('feedback__img')
 
-    form.feedback__form
+    form.feedback__form(id='form' action="#")
       p Для <span>консультации</span> заполните форму!
       p С Вами свяжутся в ближайшее время
       .feedback__box
-        input(class='feedback__name' placeholder='Ваше имя')
-        input(class='feedback__tel' placeholder='Ваш телефон')
+        input(class='feedback__name' name='name' placeholder='Ваше имя')
+        input(class='feedback__tel .tel' name='tel' placeholder='Ваш телефон' type="tel")
         button(class='feedback__button' type='submit') отправить
 
   section.video
