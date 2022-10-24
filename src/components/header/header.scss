@@ -13,15 +13,17 @@
     border-bottom: solid $greyColor 1px;
   }
 
+  @media (max-width: 320px) {
+    padding: 16px 15px 10px 15px;
+  }
+
   & > p:last-child {
     display: none;
   }
 
   &__wrapper {
     display: flex;
-    //justify-content: space-between;
     align-items: center;
-    //width: 210px;
   }
 
   &__logo {
@@ -31,6 +33,10 @@
       @media (max-width: 768px) {
         width: 64px;
         height: 62px;
+      }
+      @media (max-width: 320px) {
+        width: 48px;
+        height: 47px;
       }
     }
   }
@@ -130,6 +136,13 @@
     @media (max-width: 768px) {
       margin: 0 22px 0 0;
     }
+    @media (max-width: 320px) {
+      width: 44px;
+      height: 44px;
+      &:nth-child(2), &:first-child {
+        display: none;
+      }
+    }
   }
 
   &__quantity {
@@ -183,6 +196,11 @@
     display: flex;
   }
 
+  @media (max-width: 320px) {
+    width: 44px;
+    height: 44px;
+  }
+
   &__line {
     width: 22px;
     height: 2px;
@@ -191,6 +209,10 @@
     margin:  0 0 7px 0 ;
     &:last-child {
       margin: 0;
+    }
+    @media (max-width: 320px) {
+      width: 18px;
+      height: 1.5px;
     }
   }
 }

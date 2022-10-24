@@ -11,6 +11,11 @@ h1 {
     font-size: 45px;
     line-height: 55px;
   }
+  @media (max-width: 320px) {
+    font-size: 30px;
+    line-height: 37px;
+    margin: 0;
+  }
 }
 
 .container {
