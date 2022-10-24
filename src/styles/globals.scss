@@ -4,6 +4,14 @@ html {
   font-family: $font-base;
 }
 
+body {
+  @media (max-width: 767px) {
+    &.lock {
+      overflow: hidden;
+    }
+  }
+}
+
 h1 {
   font: $font-title;
   color: $primaryColor;
