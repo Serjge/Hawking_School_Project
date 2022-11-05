@@ -1,1 +1,1 @@
-export {testReducer, changeValue} from './test'
+export { testReducer, changeValue } from './test';

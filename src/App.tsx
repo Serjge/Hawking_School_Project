@@ -1,26 +1,29 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
+
 import { useDispatch, useSelector } from 'react-redux';
+
 import { selectTestValue } from 'store/selectors/test';
 import { changeValue } from 'store/slices/test';
 
-function App() {
-
+const App = (): ReactElement => {
   const dispatch = useDispatch();
   const value = useSelector(selectTestValue);
 
-  const onChangeValueClick = () => {
-    dispatch(changeValue( 'World'))
-  }
+  const onChangeValueClick = (): void => {
+    dispatch(changeValue('World'));
+  };
 
   return (
-    <div >
+    <div>
       <header>
         SDAEM
         {value}
-        <button onClick={onChangeValueClick}>World </button>
+        <button type="button" onClick={onChangeValueClick}>
+          World{' '}
+        </button>
       </header>
     </div>
   );
-}
+};
 
 export default App;
