@@ -1,29 +1,24 @@
 import React, { ReactElement } from 'react';
 
-import { useDispatch, useSelector } from 'react-redux';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import { selectTestValue } from 'store/selectors/test';
-import { changeValue } from 'store/slices/test';
+import { DefaultLayout } from 'components/models';
+import { AppRoutes } from 'enum/AppRoutes';
+import { Main, News, Contacts, Map, Page404, Tariffs } from 'pages';
 
-const App = (): ReactElement => {
-  const dispatch = useDispatch();
-  const value = useSelector(selectTestValue);
-
-  const onChangeValueClick = (): void => {
-    dispatch(changeValue('World'));
-  };
-
+export const App = (): ReactElement => {
   return (
-    <div>
-      <header>
-        SDAEM
-        {value}
-        <button type="button" onClick={onChangeValueClick}>
-          World{' '}
-        </button>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path={AppRoutes.index} element={<DefaultLayout />}>
+          <Route path={AppRoutes.index} element={<Main />} />
+          <Route path={AppRoutes.news} element={<News />} />
+          <Route path={AppRoutes.contacts} element={<Contacts />} />
+          <Route path={AppRoutes.map} element={<Map />} />
+          <Route path={AppRoutes.tariffs} element={<Tariffs />} />
+          <Route path={'/*'} element={<Page404 />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 };
-
-export default App;

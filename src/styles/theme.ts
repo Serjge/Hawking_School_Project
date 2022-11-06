@@ -1,11 +1,26 @@
 import { DefaultTheme } from 'styled-components';
 
 export const theme: DefaultTheme = {
-  mainFontColor: '#111827',
-  secondFontColor: '#4D5562',
-  mainColor: '#5D5FEF',
-  mainBackgroundColor: '#F3F4F6',
-  secondBackgroundColor: '#E5E5E5',
-  mainBorderColor: '#E2E3E5',
-  secondBorderColor: '#C4C4C4',
+  backgroundColor: {
+    main: '#FFFFFF',
+    second: '#F8F8F8',
+  },
+  color: {
+    main: '#664EF9',
+    second: '#8291A3',
+  },
+  colorActive: {
+    main: '#1E2123',
+  },
+  fontColor: {
+    main: '#111827',
+    second: '#fff',
+  },
+  borderColor: {
+    main: '#ffd54f',
+    second: '#C4C4C4',
+  },
+  width: {
+    wrapper: 1280,
+  },
 };

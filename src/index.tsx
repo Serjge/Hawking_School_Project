@@ -4,12 +4,10 @@ import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
 import { ThemeProvider } from 'styled-components';
 
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-
+import { App } from 'App';
+import reportWebVitals from 'reportWebVitals';
 import { store } from 'store';
-import { GlobalStyle } from 'styles/globalStyles';
-import { theme } from 'styles/theme';
+import { GlobalStyle, theme } from 'styles';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 

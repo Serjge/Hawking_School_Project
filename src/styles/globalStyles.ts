@@ -6,14 +6,22 @@ export type GlobalThemeProps = {
 
 export const GlobalStyle = createGlobalStyle<GlobalThemeProps>`
   body {
-    font-weight: 500;
+    font-weight: 400;
     font-size: 14px;
-    line-height: 15px;
+    line-height: 17px;
     font-family: "Inter", sans-serif;
     -webkit-font-smoothing: antialiased;
     margin: 0 auto;
-    background-color: ${({ theme: { mainBackgroundColor } }) => mainBackgroundColor};
-    color: ${({ theme: { mainFontColor } }) => mainFontColor};
+    background-color: ${({
+      theme: {
+        backgroundColor: { main },
+      },
+    }) => main};
+    color: ${({
+      theme: {
+        fontColor: { main },
+      },
+    }) => main};
   }
 
   /* Reset and base styles  */
