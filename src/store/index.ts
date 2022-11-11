@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { testReducer } from 'store/slices';
 
+import { testReducer } from 'store/slices';
 
 export const store = configureStore({
   reducer: {

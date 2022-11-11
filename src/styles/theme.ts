@@ -20,7 +20,4 @@ export const theme: DefaultTheme = {
     main: '#ffd54f',
     second: '#C4C4C4',
   },
-  width: {
-    wrapper: 1280,
-  },
 };

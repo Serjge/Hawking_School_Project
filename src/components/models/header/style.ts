@@ -1,7 +1,8 @@
 import styled, { css } from 'styled-components';
 
 import { ReactComponent as HeartSvg } from 'assets/icons/heart.svg';
-import { ReactComponent as MarkSvg } from 'assets/icons/mark.svg';
+import { MarkIcon } from 'components/icon';
+import { WIDTH } from 'styles/constance';
 
 type HeaderType = {
   type: 'top' | 'bottom';
@@ -30,11 +31,7 @@ export const HeaderWrapper = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: ${({
-    theme: {
-      width: { wrapper },
-    },
-  }) => wrapper}px;
+  width: ${WIDTH.container}px;
   margin: 0 auto;
 `;
 
@@ -98,7 +95,7 @@ type MarkType = {
   colorMark: 'grey' | 'yellow';
 };
 
-export const Mark = styled(MarkSvg)<MarkType>`
+export const Mark = styled(MarkIcon)<MarkType>`
   ${({ theme: { color, colorActive, borderColor }, isActive, colorMark }) => {
     if (colorMark === 'yellow') {
       return css`

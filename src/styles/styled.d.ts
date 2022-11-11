@@ -14,9 +14,6 @@ declare module 'styled-components' {
       main: string,
       second?: string,
     },
-    width: {
-      wrapper: number,
-    },
     fontColor: {
       main: string,
       second?: string,
