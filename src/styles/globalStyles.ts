@@ -1,15 +1,91 @@
 import { createGlobalStyle, DefaultTheme } from 'styled-components';
 
+import InterBold from 'assets/font/Inter-Bold.ttf';
+import InterExtraBold from 'assets/font/Inter-ExtraBold.ttf';
+import InterExtraLight from 'assets/font/Inter-ExtraLight.ttf';
+import InterLight from 'assets/font/Inter-Light.ttf';
+import InterMedium from 'assets/font/Inter-Medium.ttf';
+import InterRegular from 'assets/font/Inter-Regular.ttf';
+import InterSemiBold from 'assets/font/Inter-SemiBold.ttf';
+import InterThin from 'assets/font/Inter-Thin.ttf';
+
 export type GlobalThemeProps = {
   theme: DefaultTheme;
 };
+
+export const GlobalFonts = createGlobalStyle`
+
+  @font-face {
+    font-family: 'Inter', sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    src: local('Inter Font'), local('InterFont'),
+    url(${InterThin}) format('truetype'),
+  }
+
+  @font-face {
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    src: local('Inter Font'), local('InterFont'),
+    url(${InterExtraLight}) format('truetype'),
+  }
+
+  @font-face {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    src: local('Inter Font'), local('InterFont'),
+    url(${InterLight}) format('truetype'),
+  }
+
+  @font-face {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    src: local('Inter Font'), local('InterFont'),
+    url(${InterRegular}) format('truetype'),
+  }
+
+  @font-face {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    src: local('Inter Font'), local('InterFont'),
+    url(${InterMedium}) format('truetype'),
+  }
+
+  @font-face {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    src: local('Inter Font'), local('InterFont'),
+    url(${InterSemiBold}) format('truetype'),
+  }
+
+  @font-face {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    src: local('Inter Font'), local('InterFont'),
+    url(${InterBold}) format('truetype'),
+  }
+
+  @font-face {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    src: local('Inter Font'), local('InterFont'),
+    url(${InterExtraBold}) format('truetype'),
+  }
+`;
 
 export const GlobalStyle = createGlobalStyle<GlobalThemeProps>`
   body {
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
-    font-family: "Inter", sans-serif;
+    font-family: "InterFont", sans-serif;
     -webkit-font-smoothing: antialiased;
     margin: 0 auto;
     background-color: ${({
@@ -31,6 +107,7 @@ export const GlobalStyle = createGlobalStyle<GlobalThemeProps>`
     box-sizing: border-box;
     border: none;
   }
+
   *,
   *::before,
   *::after {
