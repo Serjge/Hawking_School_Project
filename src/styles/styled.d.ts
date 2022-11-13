@@ -17,6 +17,7 @@ declare module 'styled-components' {
     fontColor: {
       main: string,
       second?: string,
+      pageTitle?: string,
     },
     borderColor: {
       main: string,

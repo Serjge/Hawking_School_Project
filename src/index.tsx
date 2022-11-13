@@ -7,7 +7,7 @@ import { ThemeProvider } from 'styled-components';
 import { App } from 'App';
 import reportWebVitals from 'reportWebVitals';
 import { store } from 'store';
-import { GlobalStyle, theme } from 'styles';
+import { GlobalStyle, theme, GlobalFonts } from 'styles';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 
@@ -15,6 +15,7 @@ root.render(
   <Provider store={store}>
     <ThemeProvider theme={theme}>
       <GlobalStyle />
+      <GlobalFonts />
       <App />
     </ThemeProvider>
   </Provider>,

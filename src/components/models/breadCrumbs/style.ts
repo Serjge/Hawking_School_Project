@@ -10,7 +10,6 @@ export const BreadCrumbsWrapper = styled.div`
   width: ${WIDTH.container}px;
   margin: 0 auto;
   margin-top: 42px;
-  margin-bottom: 25px;
 `;
 
 type CurrentPageProps = {
@@ -26,6 +25,7 @@ export const CurrentPage = styled.p<CurrentPageProps>`
   display: inline;
   margin-left: 17px;
   position: relative;
+  letter-spacing: 0.5px;
   &::after {
     content: '';
     position: absolute;

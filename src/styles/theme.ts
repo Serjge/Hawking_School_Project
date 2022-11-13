@@ -15,6 +15,7 @@ export const theme: DefaultTheme = {
   fontColor: {
     main: '#111827',
     second: '#fff',
+    pageTitle: '#1e2123',
   },
   borderColor: {
     main: '#ffd54f',
