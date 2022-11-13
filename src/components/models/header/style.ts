@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 
 import { ReactComponent as HeartSvg } from 'assets/icons/heart.svg';
-import { MarkIcon } from 'components/icon';
+import { ReactComponent as MarkSvg } from 'assets/icons/mark.svg';
 import { WIDTH } from 'styles/constance';
 
 type HeaderType = {
@@ -49,7 +49,7 @@ export const NavItem = styled.div<NavItemType>`
   font-style: normal;
   font-size: 14px;
   line-height: 17px;
-  letter-spacing: 0.25px;
+  letter-spacing: 0.4px;
 
   ${({ theme: { borderColor, color, colorActive }, isActive, type }) => {
     if (type === 'bottom') {
@@ -62,7 +62,7 @@ export const NavItem = styled.div<NavItemType>`
     }
 
     return css`
-      margin-right: 57px;
+      margin-right: 58px;
       height: 40px;
       color: ${isActive ? colorActive.main : color.second};
       border-bottom: solid 3px ${isActive ? borderColor.main : 'none'};
@@ -90,27 +90,24 @@ export const Heart = styled(HeartSvg)`
   margin-left: 10px;
 `;
 
-type MarkType = {
-  isActive: boolean;
-  colorMark: 'grey' | 'yellow';
-};
+export const MarkYellow = styled(MarkSvg)`
+  margin-left: 15px;
+  fill: ${({
+    theme: {
+      borderColor: { main },
+    },
+  }) => main};
+  width: 12px;
+  height: 15px;
+`;
 
-export const Mark = styled(MarkIcon)<MarkType>`
-  ${({ theme: { color, colorActive, borderColor }, isActive, colorMark }) => {
-    if (colorMark === 'yellow') {
-      return css`
-        margin-left: 15px;
-        fill: ${borderColor.main};
-        width: 12px;
-        height: 15px;
-      `;
-    }
-
-    return css`
-      margin-right: 5px;
-      fill: ${isActive ? colorActive.main : color.second};
-      width: 8px;
-      height: 10px;
-    `;
-  }}
+export const MarkGrey = styled(MarkSvg)`
+  margin-right: 5px;
+  fill: ${({
+    theme: {
+      color: { second },
+    },
+  }) => second};
+  width: 8px;
+  height: 10px;
 `;

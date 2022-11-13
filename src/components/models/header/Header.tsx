@@ -7,7 +7,8 @@ import {
   HeaderStyled,
   HeaderWrapper,
   Heart,
-  Mark,
+  MarkGrey,
+  MarkYellow,
   Nav,
   NavItem,
 } from './style';
@@ -16,13 +17,13 @@ import logo from 'assets/icons/logo.png';
 import { Button } from 'components/ui/button/Button';
 import { AppRoutes } from 'enum/AppRoutes';
 
-type MenuType = {
+type Menu = {
   id: string;
   link: string;
   name: string;
 };
 
-const MENU: MenuType[] = [
+const MENU: Menu[] = [
   { id: '1', link: AppRoutes.index, name: 'Главная' },
   { id: '2', link: AppRoutes.news, name: 'Новости' },
   { id: '3', link: AppRoutes.tariffs, name: 'Размещение и тарифы' },
@@ -30,7 +31,7 @@ const MENU: MenuType[] = [
   { id: '5', link: AppRoutes.contacts, name: 'Контакты' },
 ];
 
-const MENU2: MenuType[] = [
+const MENU2: Menu[] = [
   { id: '1', link: AppRoutes.apartment, name: 'Квартиры на сутки' },
   { id: '2', link: AppRoutes.cottages, name: 'Коттеджи и усадьбы' },
   { id: '3', link: AppRoutes.bath, name: 'Бани и Сауны' },
@@ -46,13 +47,14 @@ export const Header = (): ReactElement => (
             <NavLink key={id} to={link}>
               {({ isActive }) => (
                 <NavItem type="top" isActive={isActive}>
-                  {id === '4' && <Mark colorMark="grey" isActive={isActive} />}
+                  {id === '4' && <MarkGrey />}
                   {name}
                 </NavItem>
               )}
             </NavLink>
           ))}
         </Nav>
+
         <div>
           <ButtonHeader colorButton="grey">
             Закладки <Heart />
@@ -61,6 +63,7 @@ export const Header = (): ReactElement => (
         </div>
       </HeaderWrapper>
     </HeaderStyled>
+
     <HeaderStyled type="bottom">
       <HeaderWrapper>
         <img src={logo} alt="logo" />
@@ -69,7 +72,7 @@ export const Header = (): ReactElement => (
             {({ isActive }) => (
               <NavItem type="bottom" isActive={isActive}>
                 {name}
-                {id === '1' && <Mark colorMark="yellow" isActive={isActive} />}
+                {id === '1' && <MarkYellow />}
               </NavItem>
             )}
           </NavLink>
