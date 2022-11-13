@@ -1,12 +1,15 @@
-import { ReactElement } from 'react';
+import { ReactElement, useState } from 'react';
 
 import { NewsCard } from 'components/models/news-card/NewsCard';
+import { Pagination } from 'components/models/pagination/Pagination';
 import { Search } from 'components/models/search/Search';
 import { NEWS_MOCK } from 'mock/news';
 import { ContainerNews, WrapperListNews, WrapperNews } from 'pages/news/style';
 import { Title } from 'styles/styles';
 
 export const News = (): ReactElement => {
+  const [page, setPage] = useState(1);
+
   return (
     <WrapperNews>
       <ContainerNews>
@@ -26,6 +29,12 @@ export const News = (): ReactElement => {
           />
         ))}
       </WrapperListNews>
+      <Pagination
+        currentPage={page}
+        setCurrentPage={setPage}
+        contentPerPage={10}
+        count={110}
+      />
     </WrapperNews>
   );
 };

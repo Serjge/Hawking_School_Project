@@ -21,5 +21,5 @@ export const WrapperListNews = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 52px 0 80px 0;
+  margin: 52px 0;
 `;
