@@ -1,1 +1,1 @@
-export {selectTestValue} from './test'
+export { selectTestValue } from './test';
