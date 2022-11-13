@@ -1,6 +1,6 @@
 import { ReactElement } from 'react';
 
-import { NumberPage, WrapperPagination } from 'components/models/pagination/style';
+import { Dot, NumberPage, WrapperPagination } from 'components/models/pagination/style';
 import { usePagination } from 'hooks';
 
 type PaginationProps = {
@@ -28,22 +28,18 @@ export const Pagination = (props: PaginationProps): ReactElement => {
     <WrapperPagination>
       <NumberPage
         isActive={page === 1}
-        // className={cn('button', { active: page === 1 })}
-        // style={{ color: page === 1 ? 'red' : 'black' }}
         onClick={page !== 1 ? () => onPageClick(1) : undefined}
         role="presentation"
       >
         {1}
       </NumberPage>
-      {before ? <NumberPage>...</NumberPage> : null}
+      {before ? <Dot>...</Dot> : null}
 
       {paginationGroup.map(item => {
         return (
           <NumberPage
             isActive={page === item}
             key={item}
-            // style={{ color: page === item ? 'red' : 'black' }}
-            // className={cn('button', { active: page === item })}
             onClick={page !== item ? () => onPageClick(item) : undefined}
             role="presentation"
           >
@@ -52,11 +48,9 @@ export const Pagination = (props: PaginationProps): ReactElement => {
         );
       })}
 
-      {after ? <NumberPage>...</NumberPage> : null}
+      {after ? <Dot>...</Dot> : null}
       <NumberPage
         isActive={page === totalPages}
-        // style={{ color: page === totalPages ? 'red' : 'black' }}
-        // className={cn('button', { active: page === totalPages })}
         onClick={page !== totalPages ? () => onPageClick(totalPages) : undefined}
         role="presentation"
       >

@@ -52,20 +52,11 @@ export const usePagination = (
         paginationGroup = pagesInBetween.slice(-6, totalPages);
       }
       if (page >= 6 && page <= totalPages - 5) {
-        paginationGroup = [page - 2, page - 1, page, page + 1, page + 2];
+        paginationGroup = pagesInBetween.slice(page - 4, page + 1);
       }
     }
 
     // нужны или нет точки до и после центра пагинации
-    if (totalPages === 5) {
-      if (paginationGroup[0] > 2) {
-        before = true;
-      }
-      if (paginationGroup[0] < totalPages - 2) {
-        after = true;
-      }
-    }
-
     if (totalPages > 7) {
       if (paginationGroup[0] > 3) {
         before = true;
